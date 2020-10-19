@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="code\BattleCharacter.cs" />
     <Compile Include="code\Character.cs" />
+    <Compile Include="code\Collider.cs" />
     <Compile Include="code\Enemy.cs" />
     <Compile Include="code\NPC.cs" />
     <Compile Include="code\Player.cs" />
@@ -97,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data\battle_screen.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\wall.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

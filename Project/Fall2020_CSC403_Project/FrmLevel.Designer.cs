@@ -27,10 +27,12 @@
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevel));
       this.lblInGameTime = new System.Windows.Forms.Label();
       this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      this.picPlayer = new System.Windows.Forms.PictureBox();
       this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      this.picWall = new System.Windows.Forms.PictureBox();
+      this.picKoolAid = new System.Windows.Forms.PictureBox();
+      this.picPlayer = new System.Windows.Forms.PictureBox();
+      ((System.ComponentModel.ISupportInitialize)(this.picWall)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picKoolAid)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
       this.SuspendLayout();
       // 
@@ -50,16 +52,32 @@
       this.tmrUpdateInGameTime.Enabled = true;
       this.tmrUpdateInGameTime.Tick += new System.EventHandler(this.tmrUpdateInGameTime_Tick);
       // 
-      // pictureBox1
+      // tmrPlayerMove
       // 
-      this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-      this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-      this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.pictureBox1.Location = new System.Drawing.Point(688, 12);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(238, 254);
-      this.pictureBox1.TabIndex = 1;
-      this.pictureBox1.TabStop = false;
+      this.tmrPlayerMove.Enabled = true;
+      this.tmrPlayerMove.Interval = 10;
+      this.tmrPlayerMove.Tick += new System.EventHandler(this.tmrPlayerMove_Tick);
+      // 
+      // picWall
+      // 
+      this.picWall.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+      this.picWall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.picWall.Location = new System.Drawing.Point(90, 261);
+      this.picWall.Name = "picWall";
+      this.picWall.Size = new System.Drawing.Size(445, 103);
+      this.picWall.TabIndex = 3;
+      this.picWall.TabStop = false;
+      // 
+      // picKoolAid
+      // 
+      this.picKoolAid.BackColor = System.Drawing.Color.Transparent;
+      this.picKoolAid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picKoolAid.BackgroundImage")));
+      this.picKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.picKoolAid.Location = new System.Drawing.Point(688, 12);
+      this.picKoolAid.Name = "picKoolAid";
+      this.picKoolAid.Size = new System.Drawing.Size(238, 254);
+      this.picKoolAid.TabIndex = 1;
+      this.picKoolAid.TabStop = false;
       // 
       // picPlayer
       // 
@@ -72,10 +90,6 @@
       this.picPlayer.TabIndex = 0;
       this.picPlayer.TabStop = false;
       // 
-      // tmrPlayerMove
-      // 
-      this.tmrPlayerMove.Interval = 10;
-      // 
       // FrmLevel
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,15 +97,18 @@
       this.BackColor = System.Drawing.Color.DimGray;
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(938, 644);
+      this.Controls.Add(this.picWall);
       this.Controls.Add(this.lblInGameTime);
-      this.Controls.Add(this.pictureBox1);
+      this.Controls.Add(this.picKoolAid);
       this.Controls.Add(this.picPlayer);
       this.DoubleBuffered = true;
       this.Name = "FrmLevel";
       this.Text = "Form1";
       this.Load += new System.EventHandler(this.FrmLevel_Load);
+      this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyDown);
       this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyUp);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picWall)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picKoolAid)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -101,10 +118,11 @@
     #endregion
 
     private System.Windows.Forms.PictureBox picPlayer;
-    private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox picKoolAid;
     private System.Windows.Forms.Label lblInGameTime;
     private System.Windows.Forms.Timer tmrUpdateInGameTime;
     private System.Windows.Forms.Timer tmrPlayerMove;
+    private System.Windows.Forms.PictureBox picWall;
   }
 }
 

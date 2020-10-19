@@ -10,7 +10,7 @@ namespace Fall2020_CSC403_Project.code {
     private int maxHealth;
     private int strength;
 
-    public BattleCharacter(Vector2 initPos) : base(initPos) {
+    public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
       maxHealth = 10;
       strength = 5;
       health = maxHealth;
