@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace Fall2020_CSC403_Project.code {
   public class BattleCharacter : Character {
-    private int health;
-    private int maxHealth;
-    private int strength;
+    public int Health { get; private set; }
+    public int MaxHealth { get; private set; }
+    private float strength;
+
+    public event Action<int> AttackEvent;
 
     public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
-      maxHealth = 10;
-      strength = 5;
-      health = maxHealth;
+      MaxHealth = 20;
+      strength = 2;
+      Health = MaxHealth;
+    }
+
+    public void OnAttack(int amount) {
+      AttackEvent((int)(amount * strength));
+    }
+
+    public void AlterHealth(int amount) {
+      Health += amount;
     }
   }
 }

@@ -63,9 +63,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap battle_screen_fw {
+        internal static System.Drawing.Bitmap battle_screen {
             get {
-                object obj = ResourceManager.GetObject("battle_screen_fw", resourceCulture);
+                object obj = ResourceManager.GetObject("battle_screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,10 +73,39 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kool_aid {
+        internal static System.Drawing.Bitmap enemy_cheetos {
             get {
-                object obj = ResourceManager.GetObject("kool_aid", resourceCulture);
+                object obj = ResourceManager.GetObject("enemy_cheetos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemy_koolaid {
+            get {
+                object obj = ResourceManager.GetObject("enemy_koolaid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemy_poisonpacket {
+            get {
+                object obj = ResourceManager.GetObject("enemy_poisonpacket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream final_battle {
+            get {
+                return ResourceManager.GetStream("final_battle", resourceCulture);
             }
         }
         

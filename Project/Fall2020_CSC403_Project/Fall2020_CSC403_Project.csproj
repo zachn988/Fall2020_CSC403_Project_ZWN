@@ -50,9 +50,16 @@
     <Compile Include="code\Character.cs" />
     <Compile Include="code\Collider.cs" />
     <Compile Include="code\Enemy.cs" />
+    <Compile Include="code\Game.cs" />
     <Compile Include="code\NPC.cs" />
     <Compile Include="code\Player.cs" />
     <Compile Include="code\Vector2.cs" />
+    <Compile Include="FrmBattle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBattle.Designer.cs">
+      <DependentUpon>FrmBattle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,23 +68,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBattle.resx">
+      <DependentUpon>FrmBattle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -88,19 +98,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="data\final_battle.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\player.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="data\kool_aid.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\battle_screen.fw.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\wall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\enemy_cheetos.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\enemy_poisonpacket.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\enemy_koolaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
