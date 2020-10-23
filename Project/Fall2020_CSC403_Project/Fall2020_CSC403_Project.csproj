@@ -46,14 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="code\BattleCharacter.cs" />
-    <Compile Include="code\Character.cs" />
-    <Compile Include="code\Collider.cs" />
-    <Compile Include="code\Enemy.cs" />
-    <Compile Include="code\Game.cs" />
-    <Compile Include="code\NPC.cs" />
-    <Compile Include="code\Player.cs" />
-    <Compile Include="code\Vector2.cs" />
     <Compile Include="FrmBattle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +71,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,7 +112,14 @@
     <None Include="data\enemy_koolaid.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="code\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyGameLibrary\MyGameLibrary.csproj">
+      <Project>{F1E60F80-1868-4FE5-991B-FDDCFAF9B16B}</Project>
+      <Name>MyGameLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
