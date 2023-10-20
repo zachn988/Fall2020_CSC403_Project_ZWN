@@ -1,8 +1,10 @@
 extends TileMap
 
 @export var enemyScene: PackedScene
+var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	screen_size = get_viewport_rect()
 	new_game()
 	pass # Replace with function body.
 
@@ -11,13 +13,10 @@ func _ready():
 func _process(delta):
 	pass
 	
-func _on_mob_timer_timeout():
+func _on_enemy_timer_timeout():
 	var enemy = enemyScene.instantiate()
-	var enemySpawnLocation = get_node("enemyPath/enemySpawns")
-	enemySpawnLocation.progress_ratio = randf()
-	var direction = enemySpawnLocation.rotation + PI/2
-	enemy.position = enemySpawnLocation.position
-	add_child(enemy)
+	var enemySpawnLocation = get_node("Marker2D")
+	enemy.start(enemySpawnLocation.position)
 	
 func new_game():
-	$enemyTimer.start()
+	_on_enemy_timer_timeout()

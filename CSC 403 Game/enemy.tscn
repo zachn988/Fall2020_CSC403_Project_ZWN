@@ -7,6 +7,8 @@
 size = Vector2(114, 118)
 
 [node name="enemy" type="Sprite2D"]
+position = Vector2(2, -0.999998)
+scale = Vector2(0.570313, 0.523438)
 texture = ExtResource("1_uj1ju")
 script = ExtResource("2_jrqyh")
 metadata/_edit_group_ = true
