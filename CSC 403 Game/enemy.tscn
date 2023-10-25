@@ -8,11 +8,13 @@ size = Vector2(114, 118)
 
 [node name="enemy" type="Sprite2D"]
 position = Vector2(2, -0.999998)
-scale = Vector2(0.570313, 0.523438)
+scale = Vector2(0.23, 0.212)
 texture = ExtResource("1_uj1ju")
 script = ExtResource("2_jrqyh")
 metadata/_edit_group_ = true
 
-[node name="enemy_collision" type="CollisionShape2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="enemy_collision" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_bsmed")
